@@ -49,6 +49,7 @@ Output:
 
 ```bash
 python src/analyze.py requirements/example.md
+```
 
-
+## Note
 The project is designed as a small demonstration of AI-assisted requirements analysis rather than as a production-ready requirements management system.
