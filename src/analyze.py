@@ -2,7 +2,7 @@ import argparse
 import json
 from pathlib import Path
 
-from llm import analyze_requirement
+from providers.provider import get_provider
 
 
 parser = argparse.ArgumentParser(
@@ -24,7 +24,8 @@ requirement = requirement_path.read_text(encoding="utf-8")
 prompt_path = Path("prompts/requirements_analysis.txt")
 prompt_template = prompt_path.read_text(encoding="utf-8")
 prompt = f"{prompt_template}\n{requirement}"
-analysis = analyze_requirement(prompt)
+provider = get_provider()
+analysis = provider.analyze_requirement(prompt)
 
 output_dir = Path("output")
 output_dir.mkdir(exist_ok=True)

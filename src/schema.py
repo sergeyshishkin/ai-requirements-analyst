@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 class RequirementAnalysis(BaseModel):
     problem: str
     user_story: str

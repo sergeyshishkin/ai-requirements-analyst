@@ -1,4 +1,3 @@
-Пользователь хочет иметь возможность отменять отправленное сообщение
-в течение 30 секунд после отправки.
+The user wants to be able to unsend a sent message within 30 seconds after it was sent.
 
-После отмены сообщение не должно быть доступно получателю.
+After the message is unsent, it must no longer be available to the recipient.

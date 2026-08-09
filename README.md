@@ -1,55 +1,46 @@
 # AI Requirements Analyst
-
 A small AI-assisted tool for analyzing software requirements.
 
 ## What it does
+The tool takes a software requirement written in Markdown and uses a configured LLM provider to analyze it.
 
-The tool takes a software requirement written in Markdown and uses an LLM to identify:
+The analysis covers:
+* Problem
+* User Story
+* Acceptance Criteria
+* Assumptions
+* Dependencies
+* Open Questions
+* Risks
+* Unsupported Assumptions
 
-- Problem
-- User Story
-- Acceptance Criteria
-- Assumptions
-- Dependencies
-- Open Questions
-- Risks
-- Unsupported Assumptions
+The LLM response is validated against a Pydantic schema and then exported as both JSON and Markdown.
 
-The result is validated with Pydantic and exported as both JSON and Markdown.
-
-## Workflow
-
-Requirement
-→ Prompt
-→ Gemini API
-→ Structured JSON
-→ Pydantic validation
-→ JSON + Markdown report
+## Architecture
+The application separates the analysis workflow from the LLM provider.
+The provider is selected using the `LLM_PROVIDER` environment variable.
+Supported providers: gemini, openrouter
 
 ## Example
-
 Input:
-
 `requirements/example.md`
 
 Output:
-
 `output/example_analysis.json`
-
 `output/example_analysis.md`
 
-## Tech Stack
 
-- Python
-- Google Gemini API
-- Pydantic
-- python-dotenv
+## Tech Stack
+* Python
+* Google Gemini API
+* OpenRouter API
+* Pydantic
+* python-dotenv
 
 ## Run
-
 ```bash
 python src/analyze.py requirements/example.md
 ```
 
 ## Note
-The project is designed as a small demonstration of AI-assisted requirements analysis rather than as a production-ready requirements management system.
+This project is a small demonstration of an AI-assisted requirements analysis workflow. It is not intended to be a production-ready requirements management system.

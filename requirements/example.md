@@ -1,7 +1,6 @@
-Пользователи хотят получать уведомление, если выполнение их задачи
-заблокировано другой задачей.
+Users want to receive a notification when their task is blocked by another task.
 
-Пользователь должен видеть, какая задача блокирует его работу.
-Уведомление должно приходить автоматически.
+The user must be able to see which task is blocking their work.
+The notification must be sent automatically.
 
-Предполагается использовать Telegram.
+Telegram is assumed to be used.
