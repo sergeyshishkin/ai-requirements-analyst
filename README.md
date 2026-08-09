@@ -19,7 +19,7 @@ The LLM response is validated against a Pydantic schema and then exported as bot
 ## Architecture
 The application separates the analysis workflow from the LLM provider.
 The provider is selected using the `LLM_PROVIDER` environment variable.
-Supported providers: gemini, openrouter
+
 
 ## Example
 Input:
@@ -36,6 +36,17 @@ Output:
 * OpenRouter API
 * Pydantic
 * python-dotenv
+
+## Installation
+Install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a .env file with your API keys and select the LLM provider:
+LLM_PROVIDER=gemini
+Supported providers: gemini, openrouter
 
 ## Run
 ```bash
