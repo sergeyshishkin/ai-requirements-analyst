@@ -45,7 +45,9 @@ pip install -r requirements.txt
 ```
 
 Create a .env file with your API keys and select the LLM provider:
+```bash
 LLM_PROVIDER=gemini
+```
 Supported providers: gemini, openrouter
 
 ## Run
